@@ -1,32 +1,7 @@
-# the binary algorithm
+from binary_search import binary_search
+from selection_sort import selection_sort
 
-# define the function taking the array to be searched and the item we are searching for
-def binary_search(arr, item):
-    # the lowest index
-    low = 0
-    # the highest index
-    high = len(arr) - 1
-    # create the while loop
-    tries = 0
-    while low <= high:
-        tries = tries + 1
-        # create the mid value
-        mid = (low + high) // 2
-        # create the guess mid (index) in the arr
-        guess = arr[mid]
-        # check the guess is it equal to the item
-        if guess == item:
-            return "The index is " + str(mid) + ", this took " + str(tries) + " tries"
-        # is the guess greater than the item, if it is take 1 from the mid
-        elif guess > item:
-            high = mid - 1
-        else:
-            # otherwise add one to the mid
-            low = mid + 1
-    return None
-
-
-my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+my_list = [4, 2, 1, 65, 44, 100, 99, 75, 2]
 
 numbers = [
     1, 2, 3, 4, 5, 6, 7, 8,
@@ -67,5 +42,9 @@ numbers = [
 if __name__ == '__main__':
     print("This is the Binary Search Algorithm using the array: " + str(numbers) + ", and the Item: " + str(1))
     answer = binary_search(numbers, 1)
+    print(answer)
+
+    print("This is the Selection Sort Algorithm using the array: " + str(my_list))
+    answer = selection_sort(my_list)
     print(answer)
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
