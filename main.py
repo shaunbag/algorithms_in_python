@@ -1,5 +1,6 @@
 from binary_search import binary_search
 from selection_sort import selection_sort
+from quicksort import quick_sort
 
 my_list = [4, 2, 1, 65, 44, 100, 99, 75, 2]
 
@@ -46,5 +47,9 @@ if __name__ == '__main__':
 
     print("This is the Selection Sort Algorithm using the array: " + str(my_list))
     answer = selection_sort(my_list)
+    print(answer)
+
+    print("This is the Quick Sort Algorithm using the array: " + str(my_list))
+    answer = quick_sort(my_list)
     print(answer)
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
