@@ -1,6 +1,6 @@
 # Algorithms
 
-A Python implementation of fundamental computer science algorithms including search and sorting algorithms.
+A Python implementation of fundamental computer science algorithms including search, sorting, and a simple hash table example.
 
 ## 📋 Overview
 
@@ -11,6 +11,7 @@ This project contains clean, well-commented implementations of essential algorit
 - **Binary Search**: Efficient search algorithm for sorted arrays
 - **Selection Sort**: Simple sorting algorithm with O(n²) time complexity
 - **Quick Sort**: Fast divide-and-conquer sorting algorithm with O(n log n) average time complexity
+- **Hash Table Demo**: Minimal voter registry example showing constant-time lookups
 
 ## 📁 Project Structure
 
@@ -19,6 +20,7 @@ Algorithms/
 ├── binary_search.py      # Binary search implementation
 ├── selection_sort.py     # Selection sort implementation
 ├── quicksort.py          # Quick sort implementation
+├── hash_tables.py        # Hash table (voter registry) example
 └── main.py               # Example usage and demonstrations
 ```
 
@@ -90,6 +92,24 @@ sorted_list = quick_sort(my_list)
 print(sorted_list)  # Returns sorted array
 ```
 
+### Hash Table (Voter Registry)
+
+A minimal hash table example that tracks whether a name has already voted by storing names in a dictionary for O(1) average lookups and inserts.
+
+**Time Complexity (average):**
+- Insert: O(1)
+- Lookup: O(1)
+
+**Space Complexity:** O(n)
+
+**Usage:**
+```python
+from hash_tables import check_voter
+
+check_voter("alice")  # alice has not yet voted but now has registered and voted
+check_voter("alice")  # alice has already voted
+```
+
 ## 🏃 Running the Project
 
 Run the main demonstration file:
@@ -98,7 +118,7 @@ Run the main demonstration file:
 python main.py
 ```
 
-This will execute all three algorithms with example data and display the results.
+This will execute the algorithms with example data. The hash table demo is interactive and will prompt for voter names; type `end` to finish.
 
 ## 📝 Example Output
 
