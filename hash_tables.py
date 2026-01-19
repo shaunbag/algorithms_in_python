@@ -1,6 +1,6 @@
 # the hash tables data structure
 
-# create the has table
+# create the hash table
 voted = {}
 
 
