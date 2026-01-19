@@ -1,6 +1,7 @@
 from binary_search import binary_search
 from selection_sort import selection_sort
 from quicksort import quick_sort
+from hash_tables import check_voter
 
 my_list = [4, 2, 1, 65, 44, 100, 99, 75, 2]
 
@@ -52,4 +53,13 @@ if __name__ == '__main__':
     print("This is the Quick Sort Algorithm using the array: " + str(my_list))
     answer = quick_sort(my_list)
     print(answer)
+
+    # create the name variable on user input
+    name = input("Enter a Voter Name")
+    # simple loop to allow the user to enter multiple names adding to the hash table
+    while name != "end":
+        # run the check voter method from hash_tables
+        check_voter(name)
+        # allow user to try another name or the same to check the check_voter function, enter end as a name to finish
+        name = input("Enter a Voter Name, enter end to finish this ")
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
