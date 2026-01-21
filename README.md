@@ -12,12 +12,14 @@ This project contains clean, well-commented implementations of essential algorit
 - **Selection Sort**: Simple sorting algorithm with O(n²) time complexity
 - **Quick Sort**: Fast divide-and-conquer sorting algorithm with O(n log n) average time complexity
 - **Hash Table Demo**: Minimal voter registry example showing constant-time lookups
+- **Breadth-First Search (BFS)**: Graph traversal for reachability and shortest-path (unweighted) questions
 
 ## 📁 Project Structure
 
 ```
 Algorithms/
 ├── binary_search.py      # Binary search implementation
+├── breadth_first_search.py # Breadth-first search implementation
 ├── selection_sort.py     # Selection sort implementation
 ├── quicksort.py          # Quick sort implementation
 ├── hash_tables.py        # Hash table (voter registry) example
@@ -110,6 +112,21 @@ check_voter("alice")  # alice has not yet voted but now has registered and voted
 check_voter("alice")  # alice has already voted
 ```
 
+### Breadth-First Search (BFS)
+
+Traverses a graph level-by-level using a queue. This implementation searches a small example graph for the first name ending with `"m"`.
+
+**Time Complexity:** O(V + E)  
+**Space Complexity:** O(V)
+
+**Usage:**
+```python
+from breadth_first_search import breadth_first
+
+found = breadth_first()  # Prints the matching name (if found) and returns True/False
+print(found)
+```
+
 ## 🏃 Running the Project
 
 Run the main demonstration file:
@@ -118,7 +135,7 @@ Run the main demonstration file:
 python main.py
 ```
 
-This will execute the algorithms with example data. The hash table demo is interactive and will prompt for voter names; type `end` to finish.
+This will execute the algorithms with example data. The hash table demo is interactive and will prompt for voter names; type `end` to finish before the BFS demo runs.
 
 ## 📝 Example Output
 
@@ -131,6 +148,10 @@ This is the Selection Sort Algorithm using the array: [4, 2, 1, 65, 44, 100, 99,
 
 This is the Quick Sort Algorithm using the array: [4, 2, 1, 65, 44, 100, 99, 75, 2]
 [1, 2, 2, 4, 44, 65, 75, 99, 100]
+
+This is an example of the Breadth-first Search algorithm, finding the name ending with m from a graph
+thom's name ends with an m
+True
 ```
 
 ## 🎯 Use Cases

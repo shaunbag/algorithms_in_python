@@ -2,6 +2,7 @@ from binary_search import binary_search
 from selection_sort import selection_sort
 from quicksort import quick_sort
 from hash_tables import check_voter
+from breadth_first_search import breadth_first
 
 my_list = [4, 2, 1, 65, 44, 100, 99, 75, 2]
 
@@ -55,6 +56,7 @@ if __name__ == '__main__':
     print(answer)
 
     # create the name variable on user input
+    print("This is the hash tables data structure example")
     name = input("Enter a Voter Name")
     # simple loop to allow the user to enter multiple names adding to the hash table
     while name != "end":
@@ -62,4 +64,8 @@ if __name__ == '__main__':
         check_voter(name)
         # allow user to try another name or the same to check the check_voter function, enter end as a name to finish
         name = input("Enter a Voter Name, enter end to finish this ")
+
+    print("This is an example of the Breadth-first Search algorithm, finding the name ending with m from a graph")
+    answer = breadth_first()
+    print(answer)
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
