@@ -1,6 +1,6 @@
 # Algorithms
 
-A Python implementation of fundamental computer science algorithms including search, sorting, and a simple hash table example.
+A Python implementation of fundamental computer science algorithms including search, sorting, graph traversal, and data structures.
 
 ## 📋 Overview
 
@@ -13,6 +13,7 @@ This project contains clean, well-commented implementations of essential algorit
 - **Quick Sort**: Fast divide-and-conquer sorting algorithm with O(n log n) average time complexity
 - **Hash Table Demo**: Minimal voter registry example showing constant-time lookups
 - **Breadth-First Search (BFS)**: Graph traversal for reachability and shortest-path (unweighted) questions
+- **Depth-First Search (DFS)**: Recursive tree/graph traversal demonstrated on directory structures
 
 ## 📁 Project Structure
 
@@ -20,6 +21,7 @@ This project contains clean, well-commented implementations of essential algorit
 Algorithms/
 ├── binary_search.py      # Binary search implementation
 ├── breadth_first_search.py # Breadth-first search implementation
+├── depth_first_search.py # Depth-first search implementation
 ├── selection_sort.py     # Selection sort implementation
 ├── quicksort.py          # Quick sort implementation
 ├── hash_tables.py        # Hash table (voter registry) example
@@ -127,6 +129,20 @@ found = breadth_first()  # Prints the matching name (if found) and returns True/
 print(found)
 ```
 
+### Depth-First Search (DFS)
+
+Recursively traverses a tree or graph by going as deep as possible before backtracking. This implementation demonstrates DFS by recursively traversing a directory structure and printing all file names.
+
+**Time Complexity:** O(V + E)  
+**Space Complexity:** O(V) (worst case for recursion stack)
+
+**Usage:**
+```python
+from depth_first_search import print_names
+
+print_names("/path/to/directory")  # Recursively prints all files in the directory tree
+```
+
 ## 🏃 Running the Project
 
 Run the main demonstration file:
@@ -135,7 +151,7 @@ Run the main demonstration file:
 python main.py
 ```
 
-This will execute the algorithms with example data. The hash table demo is interactive and will prompt for voter names; type `end` to finish before the BFS demo runs.
+This will execute the algorithms with example data. The hash table demo is interactive and will prompt for voter names; type `end` to finish. The BFS demo runs automatically, and the DFS demo will prompt for a directory path.
 
 ## 📝 Example Output
 
@@ -152,6 +168,13 @@ This is the Quick Sort Algorithm using the array: [4, 2, 1, 65, 44, 100, 99, 75,
 This is an example of the Breadth-first Search algorithm, finding the name ending with m from a graph
 thom's name ends with an m
 True
+
+This is the depth-first algorithm, it will print the files in a given directory
+Enter a directory path: /path/to/directory
+file1.txt
+file2.py
+subdirectory_file.txt
+...
 ```
 
 ## 🎯 Use Cases
@@ -159,6 +182,8 @@ True
 - **Binary Search**: Ideal for searching in large sorted datasets (databases, search engines)
 - **Selection Sort**: Educational purposes, small datasets where simplicity is preferred
 - **Quick Sort**: General-purpose sorting for medium to large datasets, widely used in practice
+- **Breadth-First Search**: Finding shortest paths in unweighted graphs, level-order tree traversal
+- **Depth-First Search**: Tree/graph traversal, topological sorting, path finding, directory traversal
 
 ## 📚 Learning Resources
 

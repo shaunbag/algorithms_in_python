@@ -3,6 +3,7 @@ from selection_sort import selection_sort
 from quicksort import quick_sort
 from hash_tables import check_voter
 from breadth_first_search import breadth_first
+from depth_first_search import print_names
 
 my_list = [4, 2, 1, 65, 44, 100, 99, 75, 2]
 
@@ -68,4 +69,8 @@ if __name__ == '__main__':
     print("This is an example of the Breadth-first Search algorithm, finding the name ending with m from a graph")
     answer = breadth_first()
     print(answer)
+
+    print("This is the depth-first algorithm, it will print the files in a given directory")
+    path = input("Enter a directory path: ")
+    print_names(path)
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
