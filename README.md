@@ -14,6 +14,7 @@ This project contains clean, well-commented implementations of essential algorit
 - **Hash Table Demo**: Minimal voter registry example showing constant-time lookups
 - **Breadth-First Search (BFS)**: Graph traversal for reachability and shortest-path (unweighted) questions
 - **Depth-First Search (DFS)**: Recursive tree/graph traversal demonstrated on directory structures
+ - **Dijkstra's Algorithm**: Shortest-path algorithm for weighted graphs (non-negative weights)
 
 ## 📁 Project Structure
 
@@ -24,6 +25,7 @@ Algorithms/
 ├── depth_first_search.py # Depth-first search implementation
 ├── selection_sort.py     # Selection sort implementation
 ├── quicksort.py          # Quick sort implementation
+├── dijkstras_algorithm.py # Dijkstra's algorithm implementation
 ├── hash_tables.py        # Hash table (voter registry) example
 └── main.py               # Example usage and demonstrations
 ```
@@ -142,6 +144,22 @@ from depth_first_search import print_names
 
 print_names("/path/to/directory")  # Recursively prints all files in the directory tree
 ```
+
+### Dijkstra's Algorithm
+
+Dijkstra's algorithm finds the shortest path from a starting node to all other nodes in a weighted graph with non-negative edge weights. This repository includes a simple demonstration using dictionaries for the graph, cost table, and parent pointers.
+
+**Time Complexity:** O(E + V log V) with a binary heap (priority queue) implementation; O(V^2) for a naive implementation
+
+**Space Complexity:** O(V)
+
+**Usage:**
+```python
+from dijkstras_algorithm import dijkstras_algorithm
+
+dijkstras_algorithm()  # Runs the example graph and prints progress, costs, and parents
+```
+
 
 ## 🏃 Running the Project
 
