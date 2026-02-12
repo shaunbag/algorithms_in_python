@@ -11,6 +11,7 @@ This project contains clean, well-commented implementations of essential algorit
 - **Binary Search**: Efficient search algorithm for sorted arrays
 - **Selection Sort**: Simple sorting algorithm with O(n²) time complexity
 - **Quick Sort**: Fast divide-and-conquer sorting algorithm with O(n log n) average time complexity
+ - **Greedy Algorithm**: Demonstrates a greedy strategy for making locally optimal choices to build a global solution
 - **Hash Table Demo**: Minimal voter registry example showing constant-time lookups
 - **Breadth-First Search (BFS)**: Graph traversal for reachability and shortest-path (unweighted) questions
 - **Depth-First Search (DFS)**: Recursive tree/graph traversal demonstrated on directory structures
@@ -25,6 +26,7 @@ Algorithms/
 ├── depth_first_search.py # Depth-first search implementation
 ├── selection_sort.py     # Selection sort implementation
 ├── quicksort.py          # Quick sort implementation
+├── greedy_algorithm.py   # Greedy algorithm example (radio station coverage)
 ├── dijkstras_algorithm.py # Dijkstra's algorithm implementation
 ├── hash_tables.py        # Hash table (voter registry) example
 └── main.py               # Example usage and demonstrations
@@ -96,6 +98,21 @@ from quicksort import quick_sort
 my_list = [4, 2, 1, 65, 44, 100, 99, 75, 2]
 sorted_list = quick_sort(my_list)
 print(sorted_list)  # Returns sorted array
+```
+
+### Greedy Algorithm
+
+Shows a simple greedy approach (radio station coverage example) that repeatedly picks the station covering the largest number of uncovered states until all states are covered.
+
+**Time Complexity:** Problem-dependent; many greedy solutions run in O(n log n) or O(n) depending on sorting or selection steps.
+
+**Space Complexity:** O(n)
+
+**Usage:**
+```python
+from greedy_algorithm import greedy_algorithm
+
+greedy_algorithm()  # Runs the radio-station coverage example and prints chosen stations
 ```
 
 ### Hash Table (Voter Registry)

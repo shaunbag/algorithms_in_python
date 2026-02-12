@@ -5,6 +5,7 @@ from hash_tables import check_voter
 from breadth_first_search import breadth_first
 from depth_first_search import print_names
 from dijkstras_algorithm import dijkstras_algorithm
+from greedy_algorithm import greedy_algorithm
 
 my_list = [4, 2, 1, 65, 44, 100, 99, 75, 2]
 
@@ -76,4 +77,6 @@ if __name__ == '__main__':
     print_names(path)
 
     dijkstras_algorithm()
+
+    greedy_algorithm()
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
